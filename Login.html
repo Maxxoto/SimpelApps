@@ -2,20 +2,32 @@
 <html>
 
 <title>Login</title>
-<link rel="">
+<link rel="stylesheet" type="text/css" href="style.css">
 <head>
   <body>
-    <form class="box" action="style.css" method="post">
-      <img src="kemkes.png" alt="HTML5 Icon" width="200" height="100">
+    <div id="card">
+      <div id="welcome-content" >
+      <div id="welcome-title">
+    
+      <label for="user-email" style="padding-top: 13px &nbsp; Email"></label>
+      <img src="kemkes.png" alt="HTML5 Icon" width="230" height="100">
       <h1>SIMPEL</h1>
+      <div class="underline-title"></div>
       <h4>(Sistem Informasi Pelayan)</h4>
-      <label for="username">Username</label><br>
-      <input type="text" name="" placeholder="Username"><br>
-      <label for="password">Password</label><br>
-      <input type="password" name=""placeholder="password"><br>
-      <input type="submit" name="" value="Login">
-      <h4> Silahkan Login jika sudah memiliki acount</h4>
+      <form method="POST" class="form">
+        <label for="user-email" style="padding-top:13px">
+          &nbsp;Email
+        </label>
+      <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required ==$0>
+        <div class="form-border"></div>
+        <label for="user-password" style="padding-top: 22px">&nbsp;Password</label>
+        <input id="user-password" class="form-content" type="password" name="password" required/>
+        <div class="form-border"></div>
+      <a href="#"><input id="submit-btn" type="button" name="button" value="LOGIN"></a>
     </form> 
+  </div>
+  </div>
+  </div>
   </body>
 </head>
 </html>

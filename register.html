@@ -2,28 +2,34 @@
 <html>
 
 <title>Registrasi</title>
-<link rel="">
+<link rel="stylesheet" type="text/css" href="style.css">
 <head>
   <body>
     <!-- <form class="box" action="style.css" method="post"> -->
-      <img src="kemkes.png" alt="HTML5 Icon" width="200" height="100">
+      <!-- <img src="kemkes.png" alt="HTML5 Icon" width="200" height="100"> -->
+      <div id="card">
+        <div id="welcome-title">
+          <div id="welcome-content" >
       <h4>Mohon Untuk Melengkapi Data Anda</h4>
-      <label for="nama">Nama</label>
-      <input type="text" name="" placeholder="Nama Lengkap"><br>
-      <label for="instansi">Instansi</label>
-      <input type="text" name="" placeholder="Nama Instansi/Perusahaan"><br>
-      <label for="alamat">Alamat</label>
-      <input type="text" name="" placeholder="Alamat"><br>
-      <label for="telepon">Telepon</label>
-      <input type="number" name="" placeholder="Telepon/No Hp"><br>
-      <label for="email">Email</label>
-      <input type="email" name="" placeholder="Email"><br>
-      <label for="password">Password</label>
-      <input type="password" name=""placeholder="password"><br>
-      <br>
-      <input type="submit" name="" value="Registrasi">
-      <h4> Silahkan Login jika sudah memiliki acount</h4>
-    </form> 
+      <input id="user-name" class="form-content" type="text" name="" placeholder="Username" required ==$0>
+        <div class="form-border"></div>
+        <input id="instansi" class="form-content" type="text" name="" placeholder="Instansi/Perusahaan" required ==$0>
+      <div class="form-border"></div>
+      <input id="alamat" class="form-content" type="text" name="" placeholder="Alamat" required ==$0>
+      <div class="form-border"></div>
+      <input id="telepon" class="form-content" type="text" name="" placeholder="Telepon/No. Hp" required ==$0>
+      <div class="form-border"></div>
+      <input id="user-email" class="form-content" type="email" name="email" placeholder="email" required ==$0>
+      <div class="form-border"></div>
+      <input id="user-password" class="form-content" type="password" name="password" placeholder="Passworde"required/>
+      <div class="form-border"></div>
+      
+      <a href="#"><input id="submit-btn" type="button" name="button" value="REGISTER"></a>
+      <!-- <h4> Silahkan Login jika sudah memiliki acount</h4> -->
+    </form>
+  </div> 
+  </div>
+  </div>
   </body>
 </head>
 </html>

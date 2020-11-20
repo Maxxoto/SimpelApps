@@ -1,4 +1,78 @@
 body {
+main
+  background: -webkit-linear-gradient(bottom, #22E5E5, #a6f77b);
+  background-repeat: no-repeat;
+}
+
+label{
+  font-family: "Raleway SemiBold", sans-serif;
+  font-size: 11pt;
+}
+#welcome-content{
+  padding: 12px 44px;
+    }
+
+#img{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+#card {
+  background: #fbfbfb;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 510px;
+  margin: 6rem auto 8.1rem auto;
+  width: 329px;
+}
+.form-border{
+  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  height: 1px;
+  width: 100%;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-content{
+  background: #fbfbfb;
+  border: none;
+  outline: none;
+  padding-top: 14px;
+}
+#submit-btn {
+  background: -webkit-linear-gradient(right,#a55eea,#8854d0);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 30.3px;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: 0.25s;
+  width: 153px;
+}
+#welcome-title{
+  font-family: "Raleway SemiBold", sans-serif;
+  letter-spacing: 1,5px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  text-align: center;
+}
+.underline-title {
+  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 125px;
+}
+#submit-btn:hover{
+  box-shadow: 0px 1px 18px #24c64f;
+}
+=======
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
@@ -269,3 +343,4 @@ h2 {
     cursor: pointer;
   }
 }
+

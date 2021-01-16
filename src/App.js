@@ -11,8 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import './assets/main.css';
 
-// Action creator
-// import * as actions from './actions';
+// Redux setup
+import { connect } from 'react-redux';
+import * as actions from './actions';
 
 const loading = (
   <div className='pt-3 text-center'>
@@ -27,13 +28,13 @@ const loading = (
 const Login = React.lazy(() => import('./pages/Login'));
 
 class App extends Component {
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.alertReducer.message !== this.props.alertReducer.message) {
-  //     setTimeout(() => {
-  //       this.props.clear();
-  //     }, 3000);
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (prevProps.alertReducer.message !== this.props.alertReducer.message) {
+      setTimeout(() => {
+        this.props.clear();
+      }, 3000);
+    }
+  }
   render() {
     return (
       <div className='App'>
@@ -63,9 +64,8 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   const {alertReducer} = state;
-//   return {alertReducer};
-// };
-// export default connect(mapStateToProps, actions)(App);
-export default App;
+const mapStateToProps = (state) => {
+  const { alertReducer } = state;
+  return { alertReducer };
+};
+export default connect(mapStateToProps, actions)(App);

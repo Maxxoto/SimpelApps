@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 
-import logo from './logo.svg';
-import './App.css';
+// CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
+import './assets/main.css';
 
 // Action creator
 // import * as actions from './actions';
@@ -14,10 +21,10 @@ const loading = (
 );
 
 // Containers
-// const MainLayout = React.lazy(() => import('./components/TheLayout'));
+// const MainLayout = React.lazy(() => import('./components/MainLayout'));
 
-// Pages
-// const Login = React.lazy(() => import('./pages/Login'));
+// Pages;
+const Login = React.lazy(() => import('./pages/Login'));
 
 class App extends Component {
   // componentDidUpdate(prevProps) {
@@ -30,23 +37,12 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
-        {/* <Router>
+        <Router>
           <React.Suspense fallback={loading}>
             <Switch>
+              <Route exact path='/'>
+                <Redirect to='/login' />
+              </Route>
               <Route
                 exact
                 path='/login'
@@ -54,14 +50,14 @@ class App extends Component {
                 render={(props) => <Login {...props} />}
               />
 
-              <Route
+              {/* <Route
                 path='/'
                 name='Home'
                 render={(props) => <TheLayout {...props} />}
-              />
+              /> */}
             </Switch>
           </React.Suspense>
-        </Router> */}
+        </Router>
       </div>
     );
   }

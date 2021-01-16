@@ -36,6 +36,7 @@ const Login = (props) => {
                 >
                   <Controller
                     as={Input}
+                    style={errors.password && { borderColor: 'red' }}
                     name='email'
                     type='email'
                     placeholder='Masukkan email anda'
@@ -72,7 +73,10 @@ const Login = (props) => {
                 >
                   Login
                 </Button>
-                <Link to='#' className=' d-block justify-content-center mt-3'>
+                <Link
+                  to='/register'
+                  className=' d-block justify-content-center mt-3'
+                >
                   Register
                 </Link>
               </Form>

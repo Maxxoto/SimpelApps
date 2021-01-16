@@ -26,7 +26,7 @@ const loading = (
 
 // Pages;
 const Login = React.lazy(() => import('./pages/Login'));
-
+const Register = React.lazy(() => import('./pages/Register'));
 class App extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.alertReducer.message !== this.props.alertReducer.message) {
@@ -49,6 +49,12 @@ class App extends Component {
                 path='/login'
                 name='Login Page'
                 render={(props) => <Login {...props} />}
+              />
+              <Route
+                exact
+                path='/register'
+                name='Register Page'
+                render={(props) => <Register {...props} />}
               />
 
               {/* <Route
